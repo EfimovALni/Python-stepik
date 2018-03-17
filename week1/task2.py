@@ -21,3 +21,15 @@ objects = [1, 2, 1, 2, 3] # будем считать, что одинаковы
 
 #1.2	Просто гениально
 print(len(set(id(x) for x in objects)))
+
+#И так проходит
+o_id = []
+o_new = set()
+
+for i in objects:
+	o_id.append(id(i))
+
+
+for i in o_id:
+	o_new.add(i)
+print(len(o_new))
